@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>EDA Loan Status Prediction</title>
+     
+    <!-- Icons font CSS-->
+
+    <link href="{{ url_for('static', filename='D:\my project\Flask app\static\vendor\midi-font\css') }}"
+        rel="stylesheet" media="all">
+    <link href="{{ url_for('static', filename='D:\my project\Flask app\static\vendor\font awesome\css') }}" rel="stylesheet"
+        media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="{{ url_for('static', filename='D:\my project\Flask app\static\vendor\select2') }}" rel="stylesheet" media="all">
+    <link href="{{ url_for('static', filename='D:\my project\Flask app\static\vendor\date picker') }}" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" media="all">
+       
+        
+</head>
+<body style = "background-image: url('https://i2.wp.com/gadgets-africa.com/wp-content/uploads/2020/01/Bank-Loan-Request-for-Small-Business_0.png?resize=800%2C400&ssl=1');background-size: 100% 180%;">
+<body style = "background-repeat: no-repeat";>
+<body style = "background-attachment: fixed";>
+<body style = "background-size: cover";>
+<body style = "width:300px;height:300px";>  
+
+<body>
+    <div class="card card-2">
+                <div class="card-heading"></div>
+                <div class="card-body"
+         style="padding-top: 80px;padding-bottom: 80px;padding-left: 100px;padding-right: 100px;">
+                    <h2 style="background-color:Tomato;">Loan Details</h2>
+                    <div>
+                    <p style="color:rgb(57, 234, 255);font-size:19px;">    A loan is an amount of money borrowed by a lender from a bank or a financial institution for a fixed period of time. A loan is essentially a debt which has to be paid to the lender with interest until the entire loan amount has been repaid.Loans are an unsecured form of credit that is popular to meet immediate requirements. It is multi-purpose in nature and therefore can be used for various purposes including wedding, home renovation, travel purposes and more. Moreover, there is no restriction for the amount borrowed and can be used for any purpose they want.The online mode is the easiest way to keep track of your personal loan application status.</p>
+                   <div>
+                   <p1 style="color:rgb(244, 159, 255);size-40px;font-size:14px">Fill in the online application form with your personal, employment and financial details.Receive disbursal of your loan within 24 hours of approval.</p1>
+                    <form action="http://localhost:5000/predict" method="POST">
+                  
+                    <div class="row row-space">
+                            <div class="col-2">
+                             <div class="input-group">
+                              <div class="rs-select2 js-select-simple select--no-search">
+                                    <select required name="Gender">
+                                            <option disabled="disabled" selected="selected">Gender</option>
+                                            <option value="1">Male</option>
+                                            <option value="0">Female</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                             <div class="input-group">
+                             <div class="rs-select2 js-select-simple select--no-search">
+                                        <select required name="Married">
+                                            <option disabled="disabled" selected="selected">Married</option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                            <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select required name="Dependents">
+                                            <option disabled="disabled" selected="selected">Dependents</option>
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3+</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                              <div class="input-group">
+                               <div class="rs-select2 js-select-simple select--no-search">
+                                        <select required name="Education">
+                                            <option disabled="disabled" selected="selected">Education</option>
+                                            <option value="0">Graduate</option>
+                                            <option value="1">Not Graduate</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                            <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select required name="Employed">
+                                            <option disabled="disabled" selected="selected">Employed</option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                           <div class="input-group">
+                                    <input required class="input--style-2" type="text" placeholder="Applicant Income"
+                                        name="Income1">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                              <div class="input-group">
+                                    <input required class="input--style-2" type="text" placeholder="Coapplicant Income"
+                                        name="Income2">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                             <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select required name="Crhist">
+                                            <option disabled="disabled" selected="selected">Crhist</option>
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                            <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select required name="Area">
+                                            <option disabled="disabled" selected="selected">Area</option>
+                                            <option value="2">Urban</option>
+                                            <option value="1">Semi-Urban</option>
+                                            <option value="0">Rural</option>
+                                        </select>
+                                        <div class="select-dropdown"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-2">
+                            <div class="input-group">
+                                    <input required class="input--style-2" type="text" placeholder="loan Amount" name="Amount">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                           <div class="input-group">
+                                    <input required class="input--style-2" type="text" placeholder="Loan Amount Term"
+                                        name="Term">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-t-30">
+                            <div style="float: right;">
+                                <button class="btn btn--radius btn--green" type="submit">Predict</button>
+                            </div>
+                            <div>
+                                <h2><b>{{ prediction }}</b></h2>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{{ url_for('static', filename='D:\my project\Flask app\static\vendor\jquery') }}" type="text/javascript"></script>
+    <!-- Vendor JS-->
+    <script src="{{ url_for('static', filename='D:\my project\Flask app\static\vendor\select2') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='D:\my project\Flask app\static\vendor\date picker') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='D:\my project\Flask app\static\vendor\date picker') }}"
+        type="text/javascript"></script>
+
+    <!-- Main JS-->
+    <script src="{{ url_for('static', filename='D:\my project\Flask app\static\js') }}" type="text/javascript"></script>
+
+</body>
+
+</html>
